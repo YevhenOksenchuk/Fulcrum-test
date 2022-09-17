@@ -1,0 +1,25 @@
+.input {
+  background: #FFFFFF;
+  border: 1px solid #D9DCE1;
+  border-radius: 6px;
+  padding: 15px 10px 15px 24px;
+  height: 50px;
+}
+
+.input::placeholder {
+  color: #A0A4AD;
+}
+
+.btn {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.inputColor {
+  width: 24px;
+  height: 24px;
+  visibility: hidden;
+}

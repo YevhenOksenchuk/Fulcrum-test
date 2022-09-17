@@ -1,0 +1,146 @@
+.container {
+  max-width: 854px;
+  margin: 83px auto;
+}
+
+.header {
+  margin-bottom: 46px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 51px;
+}
+
+.helpBtn {
+  display: flex;
+  align-items: center;
+  width: 73px;
+  gap: 5px;
+  font-size: 15px;
+  padding: 3px;
+  color: #5D82D5;
+  border: 2px solid #5D82D5;
+  border-radius: 18px;
+  cursor: pointer;
+}
+
+.subTitle {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.wrapper {
+  padding: 29px 41px;
+  background: #FFFFFF;
+  box-shadow: 0 1px 15px rgba(12, 37, 54, 0.15);
+  border-radius: 10px
+}
+
+.wrapperQRCodeName {
+  margin-bottom: 20px;
+}
+
+.wrapperColors {
+  padding-top: 11px;
+}
+
+.subTitle {
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.arrowIconRotate {
+  transform: rotate(180deg);
+}
+
+.subTitleColor {
+  margin: 0;
+}
+
+.colorDesc {
+  font-size: 16px;
+  margin-top: -2px;
+}
+
+.accordeonHeader {
+  border-bottom: 1px solid #D9DCE1;
+  padding-bottom: 10px;
+}
+
+.contentWrapper {
+  margin: 31px 0;
+}
+
+.colorListWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 37px;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px;
+  border: 1px solid #D9DCE1;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.activeColorItem {
+  border: 2px solid #5D82D5;
+  padding: 8px 8px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    top: -10px;
+    right: -12px;
+    background: url('../assets/imgs/Done.svg') center/cover;
+  }
+}
+
+.previewColor {
+  width: 74px;
+  height: 37px;
+  border-radius: 6px;
+}
+
+.inputColorsWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 19px;
+}
+
+.inputColorLabel {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.updateIcon {
+  align-self: end;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+.colorWrapperItem {
+  flex-grow: 1;
+}
