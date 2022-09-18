@@ -11,6 +11,7 @@ import cls                   from 'classnames';
 import Input                 from '../components/Input';
 import {generateRandomColor} from '../helpers/generateRandomColor';
 import InputColor            from '../components/InputColor/InputColor';
+import {useTranslation}      from 'react-i18next';
 
 const {Panel} = Collapse;
 
@@ -26,6 +27,7 @@ export default function Home({colors}) {
   const [qrCodeName, setQrCodeNAme] = useState('');
   const [colorList, setColorList] = useState(colors || []);
   const [activeColorItem, setActiveColorItem] = useState(0);
+  const { t } = useTranslation('common');
 
   const onClickColorItem = (i) => {
     setActiveColorItem(i);
@@ -78,21 +80,22 @@ export default function Home({colors}) {
       <main>
         <section>
           <div className={styles.sectionHeader}>
-            <h2 className={styles.title}>2. Add content to the PDF QR Code</h2>
+            <h2 className={styles.title}>{t('addContentToThePdf')}</h2>
             <Tooltip title="coming soon">
               <div className={styles.helpBtn}>
                 <Image src={QuestionIcon} alt="?" width={21} height={21}/>
-                Help
+                {t('help')}
               </div>
             </Tooltip>
           </div>
 
           <div className={cls(styles.wrapper, styles.wrapperQRCodeName)}>
-            <h3 className={styles.subTitle}>Name your QR code*</h3>
+            <h3 className={styles.subTitle}>{t('nameYourQRCode')}</h3>
             <Input
               onChange={onChangeQrCodeName}
               value={qrCodeName}
-              placeholder="e.g. My QR code"
+              placeholder={t('egMyQRCode')}
+              required
             />
           </div>
 
@@ -117,8 +120,8 @@ export default function Home({colors}) {
             >
               <Panel header={
                 <header className={styles.accordeonHeader}>
-                  <h3 className={cls(styles.subTitle, styles.subTitleColor)}>Design & Customize</h3>
-                  <p className={styles.colorDesc}>Choose your color scheme</p>
+                  <h3 className={cls(styles.subTitle, styles.subTitleColor)}>{t('designAndCustomize')}</h3>
+                  <p className={styles.colorDesc}>{t('chooseYourColorScheme')}</p>
                 </header>
               } key="1">
                 <div className={styles.contentWrapper}>
@@ -145,7 +148,7 @@ export default function Home({colors}) {
 
                   <div className={styles.inputColorsWrapper}>
                     <div className={styles.colorWrapperItem}>
-                      <h4 className={styles.inputColorLabel}>Primary Color</h4>
+                      <h4 className={styles.inputColorLabel}>{t('primaryColor')}</h4>
                       <InputColor
                         onChange={(color) => onChangeColor(color, 0)}
                         color={colorList[activeColorItem]?.[0] || ''}
@@ -163,7 +166,7 @@ export default function Home({colors}) {
                     </div>
 
                     <div className={styles.colorWrapperItem}>
-                      <h4 className={styles.inputColorLabel}>Secondary Color</h4>
+                      <h4 className={styles.inputColorLabel}>{t('secondaryColor')}</h4>
                       <InputColor
                         onChange={(color) => onChangeColor(color, 1)}
                         color={colorList[activeColorItem]?.[1] || ''}

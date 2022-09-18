@@ -1,0 +1,10 @@
+{
+  "addContentToThePdf" : "2. Add content to the PDF QR Code",
+  "help" : "Help",
+  "nameYourQRCode": "Name your QR code*",
+  "egMyQRCode": "e.g. My QR code",
+  "designAndCustomize": "Design & Customize",
+  "chooseYourColorScheme": "Choose your color scheme",
+  "primaryColor": "Primary Color",
+  "secondaryColor": "Secondary Color"
+}

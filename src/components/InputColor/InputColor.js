@@ -30,12 +30,16 @@ export default function InputColor({ color, onChange }) {
           background: ${internalColor};
         }
       `}</style>
+      <style jsx global>{`
+        .inputColor {
+          font-size: 16px;
+        }
+      `}</style>
       <Input
-        className={styles.input}
-        value={internalColor || ""}
+        value={internalColor.toUpperCase() || ""}
         onChange={(e) => setInternalColor(e.target.value)}
+        className={cls(styles.input, 'inputColor')}
         suffix={
-      <>
         <div
           className={cls(styles.btn, 'bgcolor')}
           onClick={onClickColorPicker}
@@ -47,7 +51,6 @@ export default function InputColor({ color, onChange }) {
             onChange={handleChange} value={internalColor}
           />
         </div>
-      </>
         }
       />
     </>
